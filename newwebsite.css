@@ -1,0 +1,611 @@
+html {
+  height: 100%;
+  background: #28320A;
+}
+
+.style_blueberry_container {
+  width: 100%;
+}
+
+.style_blueberry_header,
+.style_blueberry_footer {
+  padding: 20px 5px 10px 10px;
+  width: 100%;
+}
+
+.style_blueberry_header {
+  background: #000000;
+  color: #ffffff;
+}
+
+.style_blueberry_footer {
+  background: #28320A;
+  color: #ffffff;
+}
+
+.style_blueberry_align_center {
+  align-self: center;
+}
+
+.style_blueberry_header A {
+  color: #ffffff;
+}
+
+.style_blueberry_header a[href]:hover {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+.style_blueberry_footer A {
+  color: #ffffff;
+}
+
+.style_blueberry_footer a[href]:hover {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+.style_blueberry_footer .fas,
+.style_blueberry_footer .fab {
+  color: #ffffff;
+}
+
+.style_blueberry_footer .fab:hover {
+  color: #d9d9d9;
+}
+
+.style_blueberry_header_icon,
+a.style_blueberry_header_icon,
+.style_blueberry_header_icon a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.style_blueberry_header_icon:hover,
+a.style_blueberry_header_icon:hover,
+.style_blueberry_header_icon a[href]:hover {
+  color: #d9d9d9 !important;
+  text-decoration: none;
+}
+
+.logged_in_session_flyout_wrapper a[href]:hover,
+.logged_out_session_flyout_wrapper a[href]:hover {
+  color: #d9d9d9 !important;
+  text-decoration: none;
+}
+
+#logged_out_session_flyout .inet_icon,
+#logged_in_session_flyout .inet_icon {
+  color: #ffffff;
+}
+
+#logged_out_session_flyout a,
+#logged_in_session_flyout a {
+  color: #ffffff;
+}
+
+#logged_out_session_flyout a:hover,
+#logged_in_session_flyout a:hover {
+  color: #d9d9d9;
+}
+
+.style_blueberry_search_form .input-group {
+  width: 100% !important;
+}
+
+.style_blueberry_top_menu .style_blueberry_title_bar,
+.style_blueberry_footer .style_blueberry_title_bar {
+  display: none;
+}
+
+.style_blueberry_top_menu {
+  padding: 5px;
+  background-color: #000000;
+}
+
+.style_blueberry_top_menu .nav-link,
+.style_blueberry_top_menu .style_blueberry_title_bar {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.style_blueberry_top_menu .nav-link:hover,
+.style_blueberry_top_menu .style_blueberry_title_bar:hover {
+  color: #d9d9d9 !important;
+  font-weight: bold;
+}
+
+.style_blueberry_side_nav .style_blueberry_title_bar {
+  padding: 10px !important;
+  font-size: 1.5em;
+  color: #323a4d;
+  font-weight: bold;
+}
+
+.style_blueberry_side_nav .nav-link {
+  color: #658116;
+}
+
+.style_blueberry_side_nav .nav-link:hover {
+  color: #658116;
+  text-decoration: underline;
+}
+
+.style_blueberry_side_nav .style_blueberry_menu,
+.style_blueberry_offcanvas_sub_menu .style_blueberry_menu {
+  margin-bottom: 20px;
+}
+
+.style_blueberry_side_nav .style_blueberry_content,
+.style_blueberry_offcanvas_sub_menu .style_blueberry_content {
+  padding: 0 10px;
+}
+
+.style_blueberry_side_nav .nav-link,
+.style_blueberry_offcanvas_sub_menu .nav-link {
+  padding: 5px;
+}
+
+.style_blueberry_wrapper {
+  padding: 20px 20px 20px 40px;
+  background-color: #ffffff;
+}
+
+.style_blueberry_footer .nav-link {
+  padding-bottom: 0;
+}
+
+.style_blueberry_page_data {
+  padding-left: 40px;
+}
+
+.style_blueberry_footer_custom_links ul {
+  display: block;
+}
+
+.style_blueberry_footer li {
+  float: left;
+  list-style: outside none none;
+  width: 50%;
+}
+
+.style_blueberry_footer .navbar-nav .nav-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: .5rem;
+}
+
+.style_blueberry_footer .d-flex.flex-column > div {
+  padding-bottom: 5px;
+}
+
+.style_blueberry_hamburger {
+  display: none;
+}
+
+.style_blueberry_side_menu {
+  background-color: #c5cfa6;
+}
+
+.style_blueberry_title_bar {
+  pointer-events: none;
+}
+
+H1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+H2 {
+  font-size: 1.75rem;
+}
+
+H3 {
+  font-size: 1.5rem;
+}
+
+H4 {
+  font-size: 1.35rem;
+}
+
+/*------ SMALLER AND EXTRA SMALLER SCREEN STYLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .style_blueberry_mobile_header_icons a,
+  .style_blueberry_mobile_header_icons i {
+    color: #ffffff;
+  }
+  .style_blueberry_mobile_header_icons a:hover,
+  .style_blueberry_mobile_header_icons i:hover {
+    color: #d9d9d9;
+  }
+  .style_blueberry_title_bar {
+    pointer-events: auto;
+  }
+  .style_blueberry_header {
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+  }
+  .style_blueberry_header .fa-shopping-cart {
+    vertical-align: top;
+  }
+  .style_blueberry_mobile_float_right {
+    float: right;
+  }
+  .style_blueberry_mobile_float_right .row {
+    display: inline-flex;
+    float: right;
+  }
+  .style_blueberry_cart_status {
+    padding-right: 15px;
+  }
+  .style_blueberry_mobile_header_icons {
+    align-self: center;
+  }
+  .style_blueberry_footer {
+    padding: 0 0 0 10px;
+  }
+  /* hide and display side menu content */
+  .style_blueberry_side_nav .style_blueberry_content, #style_blueberry_offcanvas_custom_links .style_blueberry_title_bar,
+  .style_blueberry_offcanvas_sub_menu .style_blueberry_content {
+    display: none;
+  }
+  .style_blueberry_top_menu,
+  .style_blueberry_side_nav .style_blueberry_title_bar,
+  .style_blueberry_side_nav .style_blueberry_content {
+    background-color: #2f2e33;
+  }
+  .style_blueberry_top_menu .nav-link, #style_blueberry_off_canvas_links .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+  }
+  .style_blueberry_top_menu .nav-link:hover, #style_blueberry_off_canvas_links .nav-link:hover {
+    color: #d9d9d9 !important;
+    font-weight: bold;
+  }
+  .style_blueberry_mobile_top_menu {
+    background-color: #000000;
+    margin-right: 0;
+  }
+  .style_blueberry_mobile_top_menu .style_blueberry_hamburger_icon {
+    color: #ffffff;
+  }
+  .style_blueberry_mobile_top_menu .style_blueberry_hamburger_icon:hover {
+    color: #d9d9d9;
+  }
+  .style_blueberry_mobile_top_menu .header_menu_search_form {
+    margin-top: 12px;
+  }
+  .style_blueberry_hamburger {
+    display: inline-block;
+    float: left;
+    font-size: 2rem;
+  }
+  #off_canvas_hamburger_flyout nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .style_blueberry_top_menu .style_blueberry_title_bar {
+    display: none;
+  }
+  .style_blueberry_side_nav .style_blueberry_hamburger {
+    display: none;
+  }
+  .style_blueberry_side_nav .style_blueberry_menu {
+    margin-bottom: 0;
+  }
+  .style_blueberry_side_nav .style_blueberry_title_bar,
+  .style_blueberry_offcanvas_sub_menu .nav-link,
+  .style_blueberry_offcanvas_sub_menu .style_blueberry_title_bar,
+  #offcanvas_refine_flyout .style_blueberry_title_bar {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 16px;
+    font-weight: bold;
+  }
+  .style_blueberry_offcanvas_backto_main_menu {
+    padding: 0 0 20px 6px;
+    color: #ffffff;
+  }
+  .style_blueberry_side_nav .style_blueberry_title_bar:hover,
+  .style_blueberry_offcanvas_sub_menu .nav-link:hover,
+  #offcanvas_refine_flyout .style_blueberry_title_bar:hover,
+  .style_blueberry_offcanvas_backto_main_menu:hover {
+    color: #d9d9d9;
+  }
+  .style_blueberry_offcanvas_sub_menu .style_blueberry_title_bar {
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .style_blueberry_side_nav .style_blueberry_content, #offcanvas_refine_flyout .style_blueberry_content {
+    padding-left: 20px;
+  }
+  .off_canvas_flyout_content {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-left: 10px;
+    margin-left: -10px;
+    padding-right: 0;
+  }
+  .style_blueberry_off_canvas_display {
+    left: 0;
+    padding-top: 10px;
+    z-index: 1030;
+    background-color: #2f2e33;
+  }
+  .style_blueberry_off_canvas_display A {
+    color: #ffffff;
+  }
+  .cart_menu_messages, #offcanvas_refine_flyout .refine_count {
+    color: #FFFFFF;
+    /* CUSTOMIZATION TBD */
+  }
+  #offcanvas_refine_flyout .style_blueberry_triangle_icon {
+    display: none;
+  }
+  #offcanvas_refine_flyout .style_blueberry_title_bar {
+    pointer-events: none;
+  }
+  .style_blueberry_offcanvas_sub_menu .style_blueberry_triangle_icon, #offcanvas_refine_flyout .style_blueberry_triangle_icon {
+    display: none;
+  }
+  .style_blueberry_refine_status {
+    background-color: #FFFFFF;
+    /* CUSTOMIZATION TBD */
+    padding: 20px;
+  }
+  #offcanvas_refine_flyout .style_blueberry_active_filters {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .style_blueberry_off_canvas_display .gift_card_cart_status {
+    color: #ffffff;
+  }
+  .style_blueberry_customer_logo IMG {
+    padding: 20px 5px 20px 15px;
+    max-height: 150px;
+    width: auto;
+  }
+  .cart_item_count {
+    position: absolute;
+    top: -13px;
+    left: 17px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+  }
+}
+
+/*------SMALLER SCREEN STYLES---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 577px) and (max-width: 767.98px) {
+  #nav_data_custom_links .header_menu_search_form {
+    position: absolute;
+    margin-right: 25px;
+    padding-top: 15px;
+    right: 0;
+    width: 70%;
+  }
+  .style_blueberry_session_flyout_display {
+    width: 50% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 50%;
+  }
+  .style_blueberry_off_canvas_display {
+    width: 50%;
+  }
+  .style_blueberry_hamburger_flyout_close {
+    left: 50%;
+  }
+}
+
+/*----- EXTRA SMALLER SCREEN STYLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+  #nav_data_custom_links .header_menu_search_form {
+    position: absolute;
+    margin-right: 25px;
+    padding-top: 15px;
+    right: 0;
+  }
+  .style_blueberry_off_canvas_display {
+    width: 70%;
+  }
+  .style_blueberry_hamburger_flyout_close {
+    left: 70%;
+  }
+}
+
+@media (min-width: 441px) and (max-width: 580px) {
+  /*off canvas width on pixel range*/
+  .style_blueberry_session_flyout_display {
+    width: 60% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 60%;
+  }
+}
+
+@media (max-width: 440px) {
+  /*off canvas width on pixel range*/
+  .style_blueberry_session_flyout_display {
+    width: 75% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 75%;
+  }
+}
+
+/*----- MEDIUM SIZED SCREEN STYLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .style_blueberry_session_flyout_display {
+    width: 40% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 40%;
+  }
+  #style_blueberry_off_canvas_links {
+    display: none;
+  }
+  .style_blueberry_align_center-md {
+    align-self: center;
+  }
+  .cart_item_count {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 878px) {
+  .style_blueberry_mobile_float_right {
+    padding-left: 15px;
+  }
+}
+
+/* For medium -> slightly larger screens, prevent logo from getting too small*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .style_blueberry_customer_logo IMG {
+    height: auto;
+    max-width: 133px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 878px) {
+  .style_blueberry_cart_width {
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 878px) and (max-width: 991px) {
+  .style_blueberry_cart_width {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1060px) {
+  .style_blueberry_cart_width {
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+  }
+}
+
+/*----- LARGE SIZED SCREEN STYLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 993px) {
+  .style_blueberry_session_flyout_display {
+    width: 30% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 30%;
+  }
+  .style_blueberry_align_center-lg {
+    align-self: center;
+  }
+}
+
+/*----- EXTRA LARGE SIZED SCREEN STYLES ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .style_blueberry_session_flyout_display {
+    width: 25% !important;
+  }
+  .style_blueberry_session_flyout_close {
+    right: 25%;
+  }
+  .style_blueberry_align_center-xl {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1921px) {
+  .style_blueberry_body,
+  .style_blueberry_header_row {
+    max-width: 1920px;
+  }
+}
+
+/*OFF CANVAS FLYOUT CONTENT*/
+.logged_out_session_flyout_wrapper,
+.logged_in_session_flyout_wrapper {
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  width: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-left: 10px;
+  margin-left: -10px;
+  right: 0;
+  top: 0;
+}
+
+.style_blueberry_session_flyout_display {
+  height: 100%;
+  right: 0;
+  padding-top: 10px;
+  z-index: 1030;
+  background-color: #2f2e33;
+  color: #ffffff;
+  top: 0;
+}
+
+.style_blueberry_session_flyout_close,
+.style_blueberry_hamburger_flyout_close {
+  position: absolute;
+  top: 10px;
+  padding-right: 10px;
+  color: #FFFFFF;
+  /* CUSTOMIZATION TBD */
+  z-index: 1040;
+}
+
+.offcanvas_backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* CUSTOMIZATION TBD */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.offcanvas_overlay {
+  z-index: 2000;
+}
+
+.style_blueberry_language_selection_mobile {
+  text-transform: uppercase;
+}
+
+@media print {
+  .style_blueberry_wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.email_body {
+  background-color: #ffffff;
+  color: #2f2e33;
+}
+
+.email_body A, .email_body A:visited {
+  color: #3a5199;
+}
+
+.email_body A:hover {
+  color: #253462;
+}
+
+.carousel-caption span.carousel-caption-text {
+  background: rgba(0, 0, 0, 0.5);
+}
