@@ -155,7 +155,7 @@
                   
                       <li class="has-children"><a href="#">Products</a>
                         <ul class="sub-menu">
-                          <li><a href="plants.html">Plants</a></li>vailability & Online Store</a></li>
+                          <li><a href="plants.html">Plants</a></li>
                           <li class="has-children"><a href="#">Planters & Pottery</a>
                             <ul class="sub-menu">
                               <li><a href="corten-steel-planters.html">Corten Steel Planters</a></li>
@@ -407,7 +407,7 @@
           <div class="row">
             <div class="col-lg-5">
               <h2 class="color-brand-1 mb-15">Get in touch</h2>
-              <p>Please get in touch with us to stay updated blah blah blah</p>
+              <p>Get in touch with us to stay informed and connected.</p>
               <div class="mt-50">
                 <div
                   class="Up"
@@ -1886,191 +1886,172 @@
     <script src="assets/js/main.js?v=6.0.0"></script>
     <script src="assets/js/ali-animation.js?v=1.0.0"></script>
     <script>
+        // Get the active tab inside .list-faqs only
+        function getActiveTab() {
+          const activeTab = document.querySelector('.list-faqs a.active');
 
-    // Function to get the active tab using your selector
-function getActiveTab() {
-  const activeTab = document.querySelector('.list-faqs a.active');
-  
-  if (activeTab) {
-    // Get the tab text
-    const tabText = activeTab.querySelector('span')?.textContent || activeTab.textContent;
-    
-    // Get the target content ID
-    const targetId = activeTab.getAttribute('href');
-    
-    // Log the active tab info
-    console.log('Active Tab Found:');
-    console.log('- Text:', tabText.trim());
-    console.log('- Target:', targetId);
-    console.log('- Element:', activeTab);
-    
-    return {
-      element: activeTab,
-      text: tabText.trim(),
-      target: targetId,
-      targetId: targetId?.substring(1) // Remove the # symbol
-    };
-  } else {
-    console.log('No active tab found with selector: .list-faqs a.active');
-    return null;
-  }
-}
+          if (activeTab) {
+            const tabText = activeTab.querySelector('span')?.textContent || activeTab.textContent;
+            const targetId = activeTab.getAttribute('href'); // e.g. "#faq-pane-1"
+            const targetPane = targetId ? document.getElementById(targetId.substring(1)) : null;
+            const container = targetPane ? targetPane.closest('.tab-content') : null;
 
-// Function to show only the active tab's content
-function showActiveTabContent() {
-  const activeTabInfo = getActiveTab();
-  
-  if (activeTabInfo) {
-    // Hide all tab panes
-    const allPanes = document.querySelectorAll('.tab-pane');
-    allPanes.forEach(pane => {
-      pane.style.display = 'none';
-      pane.classList.remove('show', 'active');
-    });
-    
-    // Show the active tab's content
-    if (activeTabInfo.targetId) {
-      const targetPane = document.getElementById(activeTabInfo.targetId);
-      if (targetPane) {
-        targetPane.style.display = 'block';
-        targetPane.classList.add('show', 'active');
-        console.log('Showing content for:', activeTabInfo.text);
-      } else {
-        console.log('Target pane not found:', activeTabInfo.targetId);
-      }
-    }
-  }
-}
+            console.log('Active Tab Found:');
+            console.log('- Text:', tabText.trim());
+            console.log('- Target:', targetId);
+            console.log('- Element:', activeTab);
+            if (!container) console.warn('⚠️ Could not find a .tab-content container for', targetId);
 
-// Function to set a tab as active and show its content
-function setActiveTab(targetSelector) {
-  // Remove active from all tabs
-  const allTabs = document.querySelectorAll('.list-faqs a');
-  allTabs.forEach(tab => tab.classList.remove('active'));
-  
-  // Add active to the target tab
-  const targetTab = document.querySelector(targetSelector);
-  if (targetTab) {
-    targetTab.classList.add('active');
-    console.log('Set active tab:', targetTab.querySelector('span')?.textContent?.trim());
-    showActiveTabContent();
-  } else {
-    console.log('Tab not found with selector:', targetSelector);
-  }
-}
+            return {
+              element: activeTab,
+              text: tabText.trim(),
+              target: targetId,
+              targetId: targetId?.substring(1),
+              container // may be null if structure differs
+            };
+          } else {
+            console.log('No active tab found with selector: .list-faqs a.active');
+            return null;
+          }
+        }
 
-// Check active tab status
-function checkActiveTabStatus() {
-  console.log('=== Checking Active Tab Status ===');
-  
-  const activeTabInfo = getActiveTab();
-  
-  if (activeTabInfo) {
-    console.log('✅ Active tab found:', activeTabInfo.text);
-    
-    // Check if corresponding content is visible
-    const contentPane = document.getElementById(activeTabInfo.targetId);
-    const isContentVisible = contentPane && (
-      contentPane.style.display === 'block' || 
-      contentPane.classList.contains('show')
-    );
-    
-    console.log('📄 Content visible:', isContentVisible ? '✅ Yes' : '❌ No');
-    
-    if (!isContentVisible) {
-      console.log('🔧 Content not visible, calling showActiveTabContent()');
-      showActiveTabContent();
-    }
-  } else {
-    console.log('❌ No active tab found');
-    
-    // List all available tabs
-    const allTabs = document.querySelectorAll('.list-faqs a');
-    console.log('Available tabs:');
-    allTabs.forEach((tab, index) => {
-      const text = tab.querySelector('span')?.textContent?.trim() || tab.textContent.trim();
-      const href = tab.getAttribute('href');
-      console.log(`  ${index + 1}. "${text}" → ${href}`);
-    });
-  }
-}
+        // Show only the active tab's content within its own .tab-content
+        function showActiveTabContent() {
+          const info = getActiveTab();
+          if (!info || !info.targetId) return;
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Page loaded, checking active tab...');
-  checkActiveTabStatus();
-});
+          const targetPane = document.getElementById(info.targetId);
+          if (!targetPane) {
+            console.log('Target pane not found:', info.targetId);
+            return;
+          }
 
-// Add click handlers to all tabs
-document.addEventListener('DOMContentLoaded', function() {
-  const allTabs = document.querySelectorAll('.list-faqs a');
-  
-  allTabs.forEach(tab => {
-    tab.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active from all tabs
-      allTabs.forEach(t => t.classList.remove('active'));
-      
-      // Add active to clicked tab
-      this.classList.add('active');
-      
-      // Show the content
-      showActiveTabContent();
-    });
-  });
-});
+          // Limit scope to the SAME .tab-content container
+          const container = info.container || targetPane.closest('.tab-content');
+          if (!container) {
+            console.warn('⚠️ No .tab-content container found; aborting to avoid global conflicts.');
+            return;
+          }
 
-// Expose functions globally for console testing
-window.getActiveTab = getActiveTab;
-window.showActiveTabContent = showActiveTabContent;
-window.setActiveTab = setActiveTab;
-window.checkActiveTabStatus = checkActiveTabStatus;
+          // Hide all panes only inside this container
+          const panes = Array.from(container.querySelectorAll('.tab-pane'));
+          panes.forEach(pane => {
+            pane.classList.remove('show', 'active');
+            // remove any previous inline display set by older code
+            pane.style.removeProperty('display');
+          });
+
+          // Show the target pane
+          targetPane.classList.add('show', 'active');
+          console.log('Showing content for:', info.text);
+        }
+
+        // Set a tab active (scoped to .list-faqs) and show its content
+        function setActiveTab(targetSelector) {
+          const allTabs = document.querySelectorAll('.list-faqs a');
+          allTabs.forEach(tab => tab.classList.remove('active'));
+
+          const targetTab = document.querySelector(targetSelector);
+          if (targetTab) {
+            targetTab.classList.add('active');
+            console.log('Set active tab:', targetTab.querySelector('span')?.textContent?.trim() || targetTab.textContent.trim());
+            showActiveTabContent();
+          } else {
+            console.log('Tab not found with selector:', targetSelector);
+          }
+        }
+
+        // Check active tab status (scoped)
+        function checkActiveTabStatus() {
+          console.log('=== Checking Active Tab Status (FAQ only) ===');
+
+          const info = getActiveTab();
+          if (info && info.targetId) {
+            console.log('✅ Active tab found:', info.text);
+            const contentPane = document.getElementById(info.targetId);
+
+            // Visible if it has Bootstrap's classes (we no longer rely on inline display)
+            const isContentVisible = contentPane && (contentPane.classList.contains('show') || contentPane.classList.contains('active'));
+
+            console.log('📄 Content visible:', isContentVisible ? '✅ Yes' : '❌ No');
+            if (!isContentVisible) {
+              console.log('🔧 Content not visible, calling showActiveTabContent()');
+              showActiveTabContent();
+            }
+          } else {
+            console.log('❌ No active tab found');
+
+            // List all FAQ tabs only
+            const allTabs = document.querySelectorAll('.list-faqs a');
+            console.log('Available FAQ tabs:');
+            allTabs.forEach((tab, index) => {
+              const text = tab.querySelector('span')?.textContent?.trim() || tab.textContent.trim();
+              const href = tab.getAttribute('href');
+              console.log(`  ${index + 1}. "${text}" → ${href}`);
+            });
+          }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+          console.log('Page loaded, checking FAQ active tab...');
+          checkActiveTabStatus();
+        });
+
+        // Add click handlers to FAQ tabs only
+        document.addEventListener('DOMContentLoaded', function () {
+          const allTabs = document.querySelectorAll('.list-faqs a');
+
+          allTabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+              // Prevent only FAQ tab default (not global)
+              if (this.getAttribute('href')?.startsWith('#')) e.preventDefault();
+
+              // Toggle FAQ active class and show its content (scoped)
+              allTabs.forEach(t => t.classList.remove('active'));
+              this.classList.add('active');
+              showActiveTabContent();
+            });
+          });
+        });
+
+        // Expose functions globally for console testing
+        window.getActiveTab = getActiveTab;
+        window.showActiveTabContent = showActiveTabContent;
+        window.setActiveTab = setActiveTab;
+        window.checkActiveTabStatus = checkActiveTabStatus;
 
 
+        // === Accordion sync (unchanged, but safe) ===
+        (function () {
+          function updateAccordions() {
+            document.querySelectorAll('.accordion-header').forEach(header => {
+              const btn = header.querySelector('button');
+              if (!btn) return;
 
+              const item = header.closest('.accordion-item');
+              const collapse =
+                (item && item.querySelector('.accordion-collapse')) ||
+                header.querySelector('.accordion-collapse');
 
+              if (!collapse) return;
 
+              if (btn.classList.contains('collapsed')) {
+                collapse.classList.remove('show');
+              }
+            });
+          }
 
+          document.addEventListener('DOMContentLoaded', updateAccordions);
 
+          document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.accordion-header button');
+            if (!btn) return;
+            setTimeout(updateAccordions, 0);
+          });
 
-
-
-(function () {
-  function updateAccordions() {
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      const btn = header.querySelector('button');
-      if (!btn) return;
-
-      // Find the associated collapse element
-      const item = header.closest('.accordion-item');
-      const collapse =
-        (item && item.querySelector('.accordion-collapse')) ||
-        header.querySelector('.accordion-collapse'); // fallback if nested
-
-      if (!collapse) return;
-
-      // If the button is collapsed, remove "show" from the collapse
-      if (btn.classList.contains('collapsed')) {
-        collapse.classList.remove('show');
-      }
-    });
-  }
-
-  // Run on load
-  document.addEventListener('DOMContentLoaded', updateAccordions);
-
-  // Keep in sync on header button clicks (wait a tick for class changes)
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.accordion-header button');
-    if (!btn) return;
-    setTimeout(updateAccordions, 0);
-  });
-
-  // Optional: expose for manual calls
-  window.updateAccordions = updateAccordions;
-})();
-
-
-</script></body>
+          window.updateAccordions = updateAccordions;
+        })();
+      </script>
+    </body>
 </html>
