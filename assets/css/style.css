@@ -8736,9 +8736,8 @@ li:last-child .box-border-dashed {
 }
 
 .bg-core-value {
-  background-image: url(../imgs/page/about/circle.png);
-  background-repeat: no-repeat;
-  background-position: bottom left;
+  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed), url(../../images/14064623_5404580.jpg);
+  background-size: cover;
 }
 
 .list-dots {
@@ -10048,23 +10047,8 @@ li:last-child .box-border-dashed {
 /* EXPLORE PRODUCTS */
 /***********************************/
 .set-main-explore {
-  background-color: #e6eada;
-  /*background-image: url(../../images/14064623_5404580.jpg);*/
-  /*z-index: 10;*/
-}
-/*.set-img-light-section-bottom-left {
-  position: absolute;
-  left: 20px;
-  bottom: 0;
-  z-index: 11;
-  height: 220px;
-}*/
-.set-img-light-section-bottom-right {
-  position: absolute;
-  right: 0px;
-  bottom: 0;
-  z-index: 11;
-  height: 220px;
+  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed), url(../../images/14064623_5404580.jpg);
+  background-size: cover;
 }
 #news-slider {
   margin-top: 80px;
