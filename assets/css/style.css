@@ -8737,7 +8737,7 @@ li:last-child .box-border-dashed {
 
 .bg-core-value {
   background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed),
-    url(../../images/bg-layer.png);
+    url(../../images/bg-layer.jpg);
   background-size: cover;
 }
 
@@ -10049,7 +10049,7 @@ li:last-child .box-border-dashed {
 /***********************************/
 .set-main-explore {
   background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed),
-    url(../../images/bg-layer.png);
+    url(../../images/bg-layer.jpg);
   background-size: cover;
 }
 #news-slider {
