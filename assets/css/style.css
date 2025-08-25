@@ -10925,3 +10925,9 @@ h3 {
   color: #658116 !important;
   font-size: 36px !important;
 }
+
+.services-grid .box-button-offer {
+  justify-content: flex-start !important;
+}
+
+.committed-home .row{justify-content: center !important;}
