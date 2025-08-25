@@ -8736,7 +8736,8 @@ li:last-child .box-border-dashed {
 }
 
 .bg-core-value {
-  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed), url(../../images/14064623_5404580.jpg);
+  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed),
+    url(../../images/bg-layer.png);
   background-size: cover;
 }
 
@@ -10047,7 +10048,8 @@ li:last-child .box-border-dashed {
 /* EXPLORE PRODUCTS */
 /***********************************/
 .set-main-explore {
-  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed), url(../../images/14064623_5404580.jpg);
+  background: linear-gradient(to bottom, #e6eadaeb, #e6eadaed),
+    url(../../images/bg-layer.png);
   background-size: cover;
 }
 #news-slider {
@@ -10370,7 +10372,6 @@ li:last-child .box-border-dashed {
   .owl-controls .owl-buttons .owl-prev {
     top: -15%;
   }
-  
 }
 
 .footer,
@@ -10727,7 +10728,7 @@ h3 {
   font-weight: 600;
 }
 .accordion .accordion-body {
-    padding: 12px 50px 30px 30px;
+  padding: 12px 50px 30px 30px;
 }
 @media only screen and (min-width: 1025px) {
   .footer .width-20 {
@@ -10818,9 +10819,15 @@ h3 {
   .box-info-video h2 {
     font-size: 22px;
   }
-  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
   .btn {
     font-size: 14px !important;
